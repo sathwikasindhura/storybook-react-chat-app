@@ -1,0 +1,39 @@
+import React from "react";
+import moment from "moment";
+
+export const PostCard = ({
+  mainTag,
+  title,
+  shortDesc,
+  createdAt,
+  postLink,
+  imgSrc,
+}) => (
+  <div
+    className="
+        row
+        g-0
+        border
+        rounded
+        overflow-hidden
+        flex-md-row
+        mb-4
+        shadow-sm
+        h-md-250
+        position-relative
+      "
+  >
+    <div className="col p-4 d-flex flex-column position-static">
+      <strong className="d-inline-block mb-2 text-primary ">{mainTag}</strong>
+      <h3 className="mb-0">{title}</h3>
+      <div className="mb-1 text-muted">{moment(createdAt).fromNow(true)}</div>
+      <p className="card-text mb-auto">{shortDesc}</p>
+      <a href="{postLink}" className="stretched-link">
+        Continue reading
+      </a>
+    </div>
+    <div className="col-auto d-none d-lg-block">
+      <img src={imgSrc} class="img-fluid" alt="..."></img>
+    </div>
+  </div>
+);

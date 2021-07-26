@@ -1,0 +1,18 @@
+.chat.right{
+    display: flex;
+    margin-right:70px;
+
+}
+.chat.left{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: 70px;
+    
+    
+}
+.bg{
+    background-color: indigo;
+    color:ivory;
+    border-radius: 10px;
+    
+}
